@@ -1,23 +1,21 @@
 package pl.training.shop.payments;
 
-import lombok.extern.java.Log;
+import lombok.RequiredArgsConstructor;
 import org.javamoney.moneta.Money;
+import pl.training.shop.time.TimeProvider;
 
-import java.time.Instant;
+@RequiredArgsConstructor
+public class PaymentProcessor implements PaymentService {
 
-@Log
-public class PaymentProcessor {
+    private final PaymentIdGenerator paymentIdGenerator;
+    private final PaymentFeeCalculator paymentFeeCalculator;
+    private final PaymentRepository paymentsRepository;
+    private final TimeProvider timeProvider;
 
-    private static final String LOG_FORMAT = "A new payment of %s has been initiated";
-
-    private final PaymentIdGenerator paymentIdGenerator = new PaymentIdGenerator();
-    private final PaymentFeeCalculator paymentFeeCalculator = new PaymentFeeCalculator(0.01);
-    private final PaymentRepository paymentsRepository = new PaymentRepository();
-
+    @Override
     public Payment process(PaymentRequest paymentRequest) {
         var paymentValue = calculatePaymentValue(paymentRequest.getValue());
         var payment = createPayment(paymentValue);
-        log.info(LOG_FORMAT.formatted(payment.getValue()));
         return paymentsRepository.save(payment);
     }
 
@@ -25,7 +23,7 @@ public class PaymentProcessor {
         return Payment.builder()
                 .id(paymentIdGenerator.getNext())
                 .value(paymentValue)
-                .timestamp(Instant.now())
+                .timestamp(timeProvider.getTimestamp())
                 .status(PaymentStatus.STARTED)
                 .build();
     }

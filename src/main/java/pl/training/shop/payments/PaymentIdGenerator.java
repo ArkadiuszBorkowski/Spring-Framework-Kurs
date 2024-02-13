@@ -1,11 +1,7 @@
 package pl.training.shop.payments;
 
-import java.util.UUID;
+public interface PaymentIdGenerator {
 
-public class PaymentIdGenerator {
-
-    public String getNext() {
-        return UUID.randomUUID().toString();
-    }
+    String getNext();
 
 }

@@ -1,18 +1,7 @@
 package pl.training.shop.payments;
 
-import lombok.Setter;
+public interface PaymentRepository {
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class PaymentRepository {
-
-    @Setter
-    private Map<String, Payment> payments = new HashMap<>();
-
-    public Payment save(Payment payment) {
-        payments.put(payment.getId(), payment);
-        return payment;
-    }
+    Payment save(Payment payment);
 
 }
