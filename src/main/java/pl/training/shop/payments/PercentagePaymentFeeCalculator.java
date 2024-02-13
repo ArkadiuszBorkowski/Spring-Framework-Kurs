@@ -2,6 +2,8 @@ package pl.training.shop.payments;
 
 import lombok.RequiredArgsConstructor;
 import org.javamoney.moneta.Money;
+import org.springframework.stereotype.Component;
+
 
 @RequiredArgsConstructor
 public class PercentagePaymentFeeCalculator implements PaymentFeeCalculator {
