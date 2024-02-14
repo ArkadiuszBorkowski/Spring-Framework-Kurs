@@ -15,7 +15,7 @@ import java.time.Instant;
 import static org.springframework.beans.factory.config.BeanDefinition.SCOPE_SINGLETON;
 
 
-@Service
+@RequiredArgsConstructor
 public class PaymentProcessor implements PaymentService {
 
     private final PaymentIdGenerator paymentIdGenerator;
@@ -23,21 +23,21 @@ public class PaymentProcessor implements PaymentService {
     private final PaymentRepository paymentsRepository;
     private final TimeProvider timeProvider;
 
-    @Autowired
-//    public PaymentProcessor(@Generator("uuid") PaymentIdGenerator paymentIdGenerator, PaymentFeeCalculator paymentFeeCalculator, PaymentRepository paymentsRepository, TimeProvider timeProvider) {
-    public PaymentProcessor(PaymentIdGenerator paymentIdGenerator, PaymentFeeCalculator paymentFeeCalculator, PaymentRepository paymentsRepository, TimeProvider timeProvider) {
-        this.paymentIdGenerator = paymentIdGenerator;
-        this.paymentFeeCalculator = paymentFeeCalculator;
-        this.paymentsRepository = paymentsRepository;
-        this.timeProvider = timeProvider;
-    }
 
-    public PaymentProcessor(PaymentIdGenerator paymentIdGenerator, PaymentFeeCalculator paymentFeeCalculator, PaymentRepository paymentsRepository) {
-        this.paymentIdGenerator = paymentIdGenerator;
-        this.paymentFeeCalculator = paymentFeeCalculator;
-        this.paymentsRepository = paymentsRepository;
-        timeProvider = () -> Instant.now();
-    }
+//    public PaymentProcessor(@Generator("uuid") PaymentIdGenerator paymentIdGenerator, PaymentFeeCalculator paymentFeeCalculator, PaymentRepository paymentsRepository, TimeProvider timeProvider) {
+//    public PaymentProcessor(PaymentIdGenerator paymentIdGenerator, PaymentFeeCalculator paymentFeeCalculator, PaymentRepository paymentsRepository, TimeProvider timeProvider) {
+//        this.paymentIdGenerator = paymentIdGenerator;
+//        this.paymentFeeCalculator = paymentFeeCalculator;
+//        this.paymentsRepository = paymentsRepository;
+//        this.timeProvider = timeProvider;
+//    }
+
+//    public PaymentProcessor(PaymentIdGenerator paymentIdGenerator, PaymentFeeCalculator paymentFeeCalculator, PaymentRepository paymentsRepository) {
+//        this.paymentIdGenerator = paymentIdGenerator;
+//        this.paymentFeeCalculator = paymentFeeCalculator;
+//        this.paymentsRepository = paymentsRepository;
+//        timeProvider = () -> Instant.now();
+//    }
 
     @Override
     public Payment process(PaymentRequest paymentRequest) {
