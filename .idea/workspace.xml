@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcf02dd8-d525-4e52-b794-61c69dd771c7" name="Changes" comment="004- DI-annotations.  add anottations, custom annotations to class&quot;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/PaymentsConfiguration.java" afterDir="false" />
+    <list default="true" id="dcf02dd8-d525-4e52-b794-61c69dd771c7" name="Changes" comment="005- DI-Java-configuration.  Implements spring framework via configuration class. &#10;Cleaning up the existing spring classes and making them non-spring classes">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/payments.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/shop.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/ShopConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/ShopConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/ConsolePaymentLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/ConsolePaymentLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/FakePaymentIdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/FakePaymentIdGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/InMemoryPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/InMemoryPaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/PaymentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/PaymentProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/UuidPaymentIdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/UuidPaymentIdGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/time/SystemTimeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/time/SystemTimeProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/PaymentsConfiguration.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,13 +22,14 @@
       <list>
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="004-DI-annotations" />
+        <entry key="$PROJECT_DIR$" value="005-DI-JavaConfig" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +56,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
@@ -137,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707873744034</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="005- DI-Java-configuration.  Implements spring framework via configuration class. &#10;Cleaning up the existing spring classes and making them non-spring classes">
+      <option name="closed" value="true" />
+      <created>1707952806064</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707952806064</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +164,7 @@
     <MESSAGE value="002- Clean-code: Add PaymentServiceProxy (console logger) and add interface to class PaymentIdGenerator, PaymentFeeCalculator, PaymentService)" />
     <MESSAGE value="003- Spring-basics: add spring context, aspect, simple configuration class" />
     <MESSAGE value="004- DI-annotations.  add anottations, custom annotations to class&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="004- DI-annotations.  add anottations, custom annotations to class&quot;" />
+    <MESSAGE value="005- DI-Java-configuration.  Implements spring framework via configuration class. &#10;Cleaning up the existing spring classes and making them non-spring classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="005- DI-Java-configuration.  Implements spring framework via configuration class. &#10;Cleaning up the existing spring classes and making them non-spring classes" />
   </component>
 </project>
