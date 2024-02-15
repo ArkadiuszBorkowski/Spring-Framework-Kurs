@@ -2,24 +2,14 @@ package pl.training.shop.payments;
 
 import lombok.RequiredArgsConstructor;
 import org.javamoney.moneta.Money;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import pl.training.shop.time.TimeProvider;
-
-import java.time.Instant;
-
-import static org.springframework.beans.factory.config.BeanDefinition.SCOPE_SINGLETON;
 
 
 @RequiredArgsConstructor
 public class PaymentProcessor implements PaymentService {
 
-    private final PaymentIdGenerator paymentIdGenerator;
     private final PaymentFeeCalculator paymentFeeCalculator;
+    private final PaymentIdGenerator paymentIdGenerator;
     private final PaymentRepository paymentsRepository;
     private final TimeProvider timeProvider;
 
