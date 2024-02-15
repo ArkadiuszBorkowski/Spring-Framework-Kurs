@@ -2,9 +2,9 @@ package pl.training.shop;
 
 import lombok.extern.java.Log;
 import org.javamoney.moneta.Money;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import pl.training.shop.payments.*;
+import pl.training.shop.payments.PaymentRequest;
+import pl.training.shop.payments.PaymentService;
 
 @Log
 public class  Application {
@@ -20,7 +20,7 @@ public class  Application {
             var paymentRequest = new PaymentRequest(1L, Money.of(1_000, DEFAULT_CURRENCY_CODE));
             var payment = paymentService.process(paymentRequest);
             log.info(payment.toString());
-        };
+        }
 
     }
 
