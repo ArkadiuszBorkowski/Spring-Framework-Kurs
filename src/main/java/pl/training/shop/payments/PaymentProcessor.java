@@ -24,21 +24,6 @@ public class PaymentProcessor implements PaymentService {
     private final TimeProvider timeProvider;
 
 
-//    public PaymentProcessor(@Generator("uuid") PaymentIdGenerator paymentIdGenerator, PaymentFeeCalculator paymentFeeCalculator, PaymentRepository paymentsRepository, TimeProvider timeProvider) {
-//    public PaymentProcessor(PaymentIdGenerator paymentIdGenerator, PaymentFeeCalculator paymentFeeCalculator, PaymentRepository paymentsRepository, TimeProvider timeProvider) {
-//        this.paymentIdGenerator = paymentIdGenerator;
-//        this.paymentFeeCalculator = paymentFeeCalculator;
-//        this.paymentsRepository = paymentsRepository;
-//        this.timeProvider = timeProvider;
-//    }
-
-//    public PaymentProcessor(PaymentIdGenerator paymentIdGenerator, PaymentFeeCalculator paymentFeeCalculator, PaymentRepository paymentsRepository) {
-//        this.paymentIdGenerator = paymentIdGenerator;
-//        this.paymentFeeCalculator = paymentFeeCalculator;
-//        this.paymentsRepository = paymentsRepository;
-//        timeProvider = () -> Instant.now();
-//    }
-
     @Override
     public Payment process(PaymentRequest paymentRequest) {
         var paymentValue = calculatePaymentValue(paymentRequest.getValue());

@@ -10,20 +10,16 @@ import pl.training.shop.time.TimeProvider;
 @Configuration
 public class PaymentsConfiguration {
 
-    @Bean
-    public PaymentFeeCalculator paymentFeeCalculator(){
-        return new PercentagePaymentFeeCalculator(0.01);
-    }
 
-    @Primary
     @Bean
-    public PaymentIdGenerator uuidPaymentIdGenerator(){
+    public PaymentIdGenerator PaymentIdGenerator(){
         return new UuidPaymentIdGenerator();
     }
 
+
     @Bean
-    public PaymentIdGenerator fakePaymentIdGenerator(){
-        return new FakePaymentIdGenerator();
+    public PaymentFeeCalculator paymentFeeCalculator(){
+        return new PercentagePaymentFeeCalculator(0.01);
     }
 
     @Bean
