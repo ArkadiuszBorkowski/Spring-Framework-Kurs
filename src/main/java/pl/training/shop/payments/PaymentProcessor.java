@@ -3,6 +3,7 @@ package pl.training.shop.payments;
 import lombok.RequiredArgsConstructor;
 import org.javamoney.moneta.Money;
 import pl.training.shop.commons.aop.LogExecutionTime;
+import pl.training.shop.commons.aop.Retry;
 import pl.training.shop.time.TimeProvider;
 
 
@@ -14,6 +15,8 @@ public class PaymentProcessor implements PaymentService {
     private final PaymentRepository paymentsRepository;
     private final TimeProvider timeProvider;
 
+
+    @Retry(attempts = 2)
     @LogExecutionTime
     @LogPayment
     @Override
@@ -21,8 +24,8 @@ public class PaymentProcessor implements PaymentService {
         var paymentValue = calculatePaymentValue(paymentRequest.getValue());
         var payment = createPayment(paymentValue);
         //symulacja rzucania wyjatkiem
-        //throw new IllegalArgumentException();
-       return paymentsRepository.save(payment);
+        throw new IllegalArgumentException();
+       //return paymentsRepository.save(payment);
     }
 
     private Payment createPayment(Money paymentValue) {
@@ -39,6 +42,5 @@ public class PaymentProcessor implements PaymentService {
         return paymentValue.add(paymentFee);
     }
 
-    //symulacja rzucania wyjatkiem
 
 }

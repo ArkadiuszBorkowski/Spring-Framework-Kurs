@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcf02dd8-d525-4e52-b794-61c69dd771c7" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/commons/aop/ExecutionTimeLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/commons/aop/LogExecutionTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/LogPayment.java" afterDir="false" />
+    <list default="true" id="dcf02dd8-d525-4e52-b794-61c69dd771c7" name="Changes" comment="Programowanie aspektowe - przykłady wykorzystania aspektów">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/commons/aop/Repeater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/commons/aop/Retry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_02_2024_12_48_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_02_2024_12_48__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_02_2024_12_49_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_02_2024_12_49__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/ConsolePaymentLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/ConsolePaymentLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/PaymentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/training/shop/payments/PaymentProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="006-DI-XML" />
+        <entry key="$PROJECT_DIR$" value="007-AOP" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707816697902</updated>
       <workItem from="1707816699233" duration="465000" />
-      <workItem from="1708207007992" duration="9317000" />
+      <workItem from="1708207007992" duration="13740000" />
     </task>
     <task id="LOCAL-00001" summary="002- Clean-code: Add PaymentServiceProxy (console logger) and add interface to class PaymentIdGenerator, PaymentFeeCalculator, PaymentService)">
       <option name="closed" value="true" />
@@ -143,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708213658550</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Programowanie aspektowe - przykłady wykorzystania aspektów">
+      <option name="closed" value="true" />
+      <created>1708383158667</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708383158667</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +176,7 @@
     <MESSAGE value="004- DI-annotations.  add anottations, custom annotations to class&quot;" />
     <MESSAGE value="005- DI-Java-configuration. Implements spring framework via configura…&#10;…tion class.&#10;&#10;Cleaning up the existing spring classes and making them non-spring classes" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Programowanie aspektowe - przykłady wykorzystania aspektów" />
+    <option name="LAST_COMMIT_MESSAGE" value="Programowanie aspektowe - przykłady wykorzystania aspektów" />
   </component>
 </project>
