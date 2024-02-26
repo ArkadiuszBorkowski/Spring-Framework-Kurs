@@ -18,8 +18,6 @@ import javax.annotation.PreDestroy;
 public class ConsolePaymentLogger {
 
     @Pointcut("execution(* pl.training.shop.*.PaymentProcessor.proc*())")  //* pierwsza gwiazdka to typ zwracany
-    //@Pointcut("@annotation(LogPayment)")
-    //@Pointcut("bean(paymentService)")
     void process() {
 
     }
